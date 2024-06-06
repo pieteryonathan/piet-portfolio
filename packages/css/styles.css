@@ -516,6 +516,23 @@ img {
   background-color: var(--first-color);
 }
 
+.skills__basic {
+  width: 25%;
+}
+
+.skills__intermediate {
+  width: 50%;
+}
+
+.skills__advance {
+  width: 75%;
+}
+
+.skills__expert {
+  width: 100%;
+}
+
+
 .skills__html {
   width: 90%;
 }
