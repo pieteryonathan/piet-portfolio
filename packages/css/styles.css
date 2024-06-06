@@ -490,6 +490,14 @@ img {
   padding-left: 2.7rem;
 }
 
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Two equal columns */
+  gap: 20px;
+  /* Gap between grid items */
+}
+
 .skills__titles {
   display: flex;
   justify-content: space-between;
@@ -834,6 +842,7 @@ img {
 .project__bg {
   background-color: var(--first-color-second);
   padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .project__title {
