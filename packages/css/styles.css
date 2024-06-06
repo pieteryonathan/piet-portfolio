@@ -368,6 +368,24 @@ img {
   font-weight: var(--font-medium);
 }
 
+.button--android {
+  display: inline-block;
+  background-color: #a4c639;
+  color:#ffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+}
+
+.button--apple {
+  display: inline-block;
+  background-color: #2072f3;
+  color:#ffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+}
+
 .button:hover {
   background-color: var(--first-color-alt);
 }
@@ -790,6 +808,27 @@ img {
   justify-self: center;
 }
 
+.portfolio__img2 {
+  width: 265px;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
+/* Initially hide the alternative image */
+.portfolio__img2.alt {
+  display: none;
+}
+
+/* When hovering over the image, show the alternative image */
+.portfolio__item:hover .portfolio__img2.alt {
+  display: block;
+}
+
+/* Hide the original image when the alternative image is displayed */
+.portfolio__item:hover .portfolio__img2 {
+  display: none;
+}
+
 .portfolio__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);
@@ -801,6 +840,10 @@ img {
 
 .portfolio__button:hover .button__icon {
   transform: translateX(0.25rem);
+}
+
+.portfolio__button__store:hover .button__icon {
+  transform: translateX(-0.25rem);
 }
 
 .swiper-button-prev::after,

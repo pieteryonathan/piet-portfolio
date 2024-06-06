@@ -108,6 +108,16 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
 
   /* mousewheel: true,
   keyboard: true, */
+  
+});
+
+/*==================== PORTFOLIO HOVER  ====================*/
+const portfolioImg = document.getElementById('portfolioImg');
+portfolioImg.addEventListener('mouseover', () => {
+  portfolioImg.src = './packages/images/portfolio2-ipad.png';
+});
+portfolioImg.addEventListener('mouseout', () => {
+  portfolioImg.src = './packages/images/portfolio2-iphone.png';
 });
 
 /*==================== TESTIMONIAL ====================*/
