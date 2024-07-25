@@ -20,19 +20,6 @@
                 emailjs.init('sg6VjedCEuNF6c_xx');
             })();
         </script>
-        <script>
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                emailjs.sendForm('service_na6auwc', 'template_r19rcoq', this)
-                    .then(function (response) {
-                        console.log('Email sent!', response.status, response.text);
-                        alert('Email sent successfully!');
-                    }, function (error) {
-                        console.error('Error sending email:', error);
-                        alert('Oops! Something went wrong.');
-                    });
-            });
-        </script>
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -573,60 +560,49 @@
     <section class="contact section" id="contact">
         <h2 class="section__title">Contact me</h2>
         <span class="section__subtitle">Get in touch</span>
-    
         <div class="contact__container container grid">
             <div>
                 <div class="contact__information">
                     <i class="uil uil-phone-alt contact__icon"></i>
-    
                     <div>
                         <h3 class="contact__title">Call me</h3>
                         <span class="contatc__subtitle">(+62)85156535759</span>
                     </div>
                 </div>
-    
                 <div class="contact__information">
                     <i class="uil uil-envelope contact__icon"></i>
-    
                     <div>
                         <h3 class="contact__title">E-mail</h3>
                         <span class="contatc__subtitle">pieteryonathan20@gmail.com</span>
                     </div>
                 </div>
-    
                 <div class="contact__information">
                     <i class="uil uil-map-marker contact__icon"></i>
-    
                     <div>
                         <h3 class="contact__title">Location</h3>
                         <span class="contatc__subtitle">Sukabumi, Jawa Barat, Indonesia</span>
                     </div>
                 </div>
             </div>
-    
             <form id="contact-form" class="contact__form grid">
                 <div class="contact__inputs grid">
                     <div class="contact__content">
                         <label for="name" class="contact__label">Name</label>
                         <input type="text" name="name" class="contact__input">
                     </div>
-    
                     <div class="contact__content">
                         <label for="email" class="contact__label">E-mail</label>
                         <input type="email" name="email" class="contact__input">
                     </div>
                 </div>
-    
                 <div class="contact__content">
                     <label for="subject" class="contact__label">Subject</label>
                     <input type="text" name="subject" class="contact__input">
                 </div>
-    
                 <div class="contact__content">
                     <label for="description" class="contact__label">Description</label>
                     <textarea name="description" id="description" cols="0" rows="7" class="contact__input"></textarea>
                 </div>
-    
                 <div>
                     <button type="submit" class="button button--flex">
                         Send message
@@ -636,6 +612,19 @@
             </form>
         </div>
     </section>
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_na6auwc', 'template_r19rcoq', this)
+                    .then(function (response) {
+                        console.log('Email sent!', response.status, response.text);
+                        alert('Email sent successfully!');
+                    }, function (error) {
+                        console.error('Error sending email:', error);
+                        alert('Oops! Something went wrong.');
+                    });
+            });
+        </script>
     </main>
 
     <!--==================== FOOTER ====================-->
