@@ -141,6 +141,9 @@ img {
   height: auto;
 }
 
+.button {
+  border: none;
+}
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section {
   padding: 2rem 0 4rem;
@@ -884,8 +887,8 @@ img {
 
 .project__bg {
   background-color: var(--first-color-second);
-  padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .project__title {
