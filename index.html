@@ -14,6 +14,25 @@
         <link rel="stylesheet" href="./packages/css/styles.css">
 
         <title>Pieter Yonathan</title>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function () {
+                emailjs.init('sg6VjedCEuNF6c_xx');
+            })();
+        </script>
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('service_na6auwc', 'template_r19rcoq', this)
+                    .then(function (response) {
+                        console.log('Email sent!', response.status, response.text);
+                        alert('Email sent successfully!');
+                    }, function (error) {
+                        console.error('Error sending email:', error);
+                        alert('Oops! Something went wrong.');
+                    });
+            });
+        </script>
     </head>
     <body>
         <!--==================== HEADER ====================-->
@@ -75,24 +94,13 @@
                             <a href="https://www.instagram.com/pieteryonathan/" target="_blank" class="home__social-icon">
                                 <i class="uil uil-instagram-alt"></i>
                             </a>
+                            <a href="https://wa.me/6285156535759" target="_blank" class="home__social-icon">
+                                <i class="uil uil-whatsapp"></i>
+                            </a>
                         </div>
 
                         <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home__blob-img" x="" xlink:href="packages/images/piet-1.jpg"/>
-                                </g>
-                            </svg>
+                            <img src="packages/images/piet-home.png" alt="" class="home__img">
                         </div>
 
                         <div class="home__data">
@@ -145,7 +153,7 @@
                         </div>
 
                         <div class="about__buttons">
-                            <a download="" href="packages/assets/piet-cv.pdf" class="button button--flex">
+                            <a download="" href="packages/assets/Pieter-Yonathan+Resume.pdf" class="button button--flex">
                                 Download CV<i class="uil uil-download-alt button__icon"></i>
                             </a>
                         </div>
@@ -175,19 +183,19 @@
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">Swift</h3>
-                                        <span class="skills__number">Expert</span>
+                                        <span class="skills__number">Advance</span>
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percentage skills__expert"></span>
+                                        <span class="skills__percentage skills__advance"></span>
                                     </div>
                                 </div>
                                <div class="skills__data">
                                    <div class="skills__titles">
                                        <h3 class="skills__name">Flutter</h3>
-                                       <span class="skills__number">Intermediate</span>
+                                       <span class="skills__number">Basic</span>
                                    </div>
                                    <div class="skills__bar">
-                                       <span class="skills__percentage skills__intermediate"></span>
+                                       <span class="skills__percentage skills__basic"></span>
                                    </div>
                                </div>
                                <div class="skills__data">
@@ -218,10 +226,10 @@
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">WordPress</h3>
-                                        <span class="skills__number">Expert</span>
+                                        <span class="skills__number">Advance</span>
                                     </div>
                                     <div class="skills__bar">
-                                        <span class="skills__percentage skills__expert"></span>
+                                        <span class="skills__percentage skills__advance"></span>
                                     </div>
                                 </div>
                                 <div class="skills__data">
@@ -408,7 +416,7 @@
                        <span class="qualification__subtitle">Mobile Developer - iOS</span>
                        <div class="qualification__calendar">
                           <i class="uil uil-calendar-alt"></i>
-                          Jul 2022 - Present
+                          Jul 2022 - Jul 2024
                        </div>
                    </div>
    
@@ -561,160 +569,73 @@
 
         </section>
 
-        <!--==================== TESTIMONIAL ====================-->
-        <section class="testimonial section">
-
-            <h2 class="section__title">Testimonials</h2>
-            <span class="section__subtitle">My client saying</span>
-
-            <div class="testimonial__container container swiper-container">
-                <div class="swiper-wrapper">
-                <!--==================== TESTIMONIAL 1 ====================-->
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="./packages/images/arun.PNG" alt="" class="testimonial__img">
-                                
-                                <div>
-                                    <h3 class="testimonial__name">Arun Prashanth</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-                            <div>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the 
-                            possible quality and attention and support 24 hours a day.
-                        </p>
-                    </div>
-                    <!--==================== TESTIMONIAL 2 ====================-->
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="./packages/images/yuga.PNG" alt="" class="testimonial__img">
-                                
-                                <div>
-                                    <h3 class="testimonial__name">Yugadarshan</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-                            <div>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the 
-                            possible quality and attention and support 24 hours a day.
-                        </p>
-                    </div>
-                    <!--==================== TESTIMONIAL 3 ====================-->
-                    <div class="testimonial__content swiper-slide">
-                        <div class="testimonial__data">
-                            <div class="testimonial__header">
-                                <img src="./packages/images/shenan.PNG" alt="" class="testimonial__img">
-                                
-                                <div>
-                                    <h3 class="testimonial__name">Shenan Sachinthan</h3>
-                                    <span class="testimonial__client">Client</span>
-                                </div>
-                            </div>
-                            <div>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                                <i class="uil uil-star testimonial__icon-star"></i>
-                            </div>
-                        </div>
-
-                        <p class="testimonial__description">I get a good impression, I carry out my project with all the 
-                            possible quality and attention and support 24 hours a day.</p>
-                    </div>      
-                </div>
-
-                <!--Add pagination-->
-                <div class="swiper-pagination swiper-pagination-testimonial"></div>
-            </div>
-            </section>
-
         <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact me</h2>
-            <span class="section__subtitle">Get in touch</span>
-
-            <div class="contact__container container grid">
-                <div>
-                    <div class="contact__information">
-                        <i class="uil uil-phone-alt contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Call me</h3>
-                            <span class="contatc__subtitle">(+62)85156535759</span>
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">E-mail</h3>
-                            <span class="contatc__subtitle">pieteryonathan20@gmail.com</span>
-                        </div>
-                    </div>
-
-                    <div class="contact__information">
-                        <i class="uil uil-map-marker contact__icon"></i>
-
-                        <div>
-                            <h3 class="contact__title">Location</h3>
-                            <span class="contatc__subtitle">Sukabumi, Jawa Barat, Indonesia</span>
-                        </div>
+    <section class="contact section" id="contact">
+        <h2 class="section__title">Contact me</h2>
+        <span class="section__subtitle">Get in touch</span>
+    
+        <div class="contact__container container grid">
+            <div>
+                <div class="contact__information">
+                    <i class="uil uil-phone-alt contact__icon"></i>
+    
+                    <div>
+                        <h3 class="contact__title">Call me</h3>
+                        <span class="contatc__subtitle">(+62)85156535759</span>
                     </div>
                 </div>
-
-                <form action="" class="contact__form grid">
-                    <div class="contact__inputs grid">
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
-                        </div>
-
-                        <div class="contact__content">
-                            <label for="" class="contact__label">E-mail</label>
-                            <input type="email" class="contact__input">
-                        </div>
-                    </div>
-
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Subject</label>
-                        <input type="text" class="contact__input">
-                    </div>
-
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Description</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
-                    </div>
-
+    
+                <div class="contact__information">
+                    <i class="uil uil-envelope contact__icon"></i>
+    
                     <div>
-                        <a href="#" class="button button--flex">
-                            Send message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
+                        <h3 class="contact__title">E-mail</h3>
+                        <span class="contatc__subtitle">pieteryonathan20@gmail.com</span>
                     </div>
-                </form>
+                </div>
+    
+                <div class="contact__information">
+                    <i class="uil uil-map-marker contact__icon"></i>
+    
+                    <div>
+                        <h3 class="contact__title">Location</h3>
+                        <span class="contatc__subtitle">Sukabumi, Jawa Barat, Indonesia</span>
+                    </div>
+                </div>
             </div>
-
-        </section>
+    
+            <form id="contact-form" class="contact__form grid">
+                <div class="contact__inputs grid">
+                    <div class="contact__content">
+                        <label for="name" class="contact__label">Name</label>
+                        <input type="text" name="name" class="contact__input">
+                    </div>
+    
+                    <div class="contact__content">
+                        <label for="email" class="contact__label">E-mail</label>
+                        <input type="email" name="email" class="contact__input">
+                    </div>
+                </div>
+    
+                <div class="contact__content">
+                    <label for="subject" class="contact__label">Subject</label>
+                    <input type="text" name="subject" class="contact__input">
+                </div>
+    
+                <div class="contact__content">
+                    <label for="description" class="contact__label">Description</label>
+                    <textarea name="description" id="description" cols="0" rows="7" class="contact__input"></textarea>
+                </div>
+    
+                <div>
+                    <button type="submit" class="button button--flex">
+                        Send message
+                        <i class="uil uil-message button__icon"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -723,14 +644,11 @@
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
-                    <h1 class="footer__title">Prashanna Sathiyamoorthy</h1>
-                    <span class="footer__subtitle">Data Analyst</span>
+                    <h1 class="footer__title">Pieter Yonathan</h1>
+                    <span class="footer__subtitle">Mobile Developer</span>
                 </div>
 
                 <ul class="footer__links">
-                    <li>
-                        <a href="#services" class="footer__link">Services</a>
-                    </li>
                     <li>
                         <a href="#portfolio" class="footer__link">Portfolio</a>
                     </li>
@@ -740,18 +658,18 @@
                 </ul>
 
                 <div class="footer__socials">
-                    <a href=https://www.facebook.com/prashanna.drashan" target="_blank" class="footer__social">
-                        <i class="uil uil-facebook"></i>
+                    <a href="https://www.linkedin.com/in/pieteryonathan/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
                     </a>
-                    <a href="https://www.instagram.com/prashanna01/" target="_blank" class="footer__social">
+                    <a href="https://www.instagram.com/pieteryonathan/" target="_blank" class="footer__social">
                         <i class="uil uil-instagram"></i>
                     </a>
-                    <a href="https://twitter.com/prashanna01" target="_blank" class="footer__social">
-                        <i class="uil uil-twitter-alt"></i>
+                    <a href="https://wa.me/6285156535759" target="_blank" class="footer__social">
+                        <i class="uil uil-whatsapp"></i>
                     </a>
                 </div>
             </div>
-            <p class="footer__copy">&#169; Ratheshan03. All rights reserved.</p>
+            <p class="footer__copy">&#169; Piet. All rights reserved.</p>
         </div>
     </footer>
 
